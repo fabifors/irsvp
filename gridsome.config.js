@@ -5,18 +5,34 @@
 
 module.exports = {
   siteName: 'iRSVP',
+  siteDescription: 'A simple and free event handler',
+
   transformers: {
-    remark: {}
+    //Add markdown support to all file-system sources
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      plugins: ['@gridsome/remark-prismjs']
+    }
   },
 
   plugins: [
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'blog/*.md',
-        typeName: 'Post'
+        path: 'content/blog/*.md',
+        typeName: 'Post',
+        route: '/blog/:slug',
+        refs: {
+          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
+          tags: {
+            typeName: 'Tag',
+            route: '/tag/:id',
+            create: true
+          }
+        }
       }
     }
   ]
 }
- 

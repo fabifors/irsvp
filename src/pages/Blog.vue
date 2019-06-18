@@ -1,26 +1,28 @@
 <template>
   <Layout>
-    <h1>Blog</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque
-      omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum
-      odit fugit assumenda rem dolores inventore iste reprehenderit maxime!
-      Iusto.
-    </p>
-    <div v-for="(post, index) in $page.allPost.edges" :key="index">
-      <Post :post="post" />
+    <div class="feed">
+      <h1 class="feed__title">Blog Feed</h1>
+      <post-summary v-for="post in $page.posts.edges" :key="post.id" :post="post"/>
     </div>
   </Layout>
 </template>
 
 <page-query>
-query Posts {
-  allPost {
+{
+  posts: allPost {
     edges {
 			node {
-        content,
+        id,
         title,
-        date
+        author,
+        date (format:"YYYY-MM-DD"),
+        description
+        path
+        tags {
+          id
+          title
+          path
+        }
       }
     }
   }
@@ -28,14 +30,29 @@ query Posts {
 </page-query>
 
 <script>
-import Post from '@/templates/Post.vue'
+import PostSummary from "@/components/PostSummary.vue";
 export default {
   metaInfo: {
     title: "Blog"
   },
   components: {
-    Post
+    "post-summary": PostSummary
+  },
+  methods: {
+    log(data) {
+      console.log(data);
+    }
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.feed {
+  &__title {
+    margin-bottom: 70px;
+    color: #707070;
+  }
+}
+</style>
+
  
