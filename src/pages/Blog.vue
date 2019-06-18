@@ -2,7 +2,7 @@
   <Layout>
     <div class="feed">
       <h1 class="feed__title">Blog Feed</h1>
-      <post-summary v-for="post in $page.posts.edges" :key="post.id" :post="post"/>
+      <post-card v-for="post in $page.posts.edges" :key="post.id" :post="post"/>
     </div>
   </Layout>
 </template>
@@ -30,13 +30,13 @@
 </page-query>
 
 <script>
-import PostSummary from "@/components/PostSummary.vue";
+import PostCard from "@/components/PostCard.vue";
 export default {
   metaInfo: {
     title: "Blog"
   },
   components: {
-    "post-summary": PostSummary
+    "post-card": PostCard
   },
   methods: {
     log(data) {
@@ -49,6 +49,7 @@ export default {
 <style lang="scss" scoped>
 .feed {
   &__title {
+    text-align: center;
     margin-bottom: 70px;
     color: #707070;
   }

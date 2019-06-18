@@ -1,7 +1,7 @@
 <template>
   <g-link :to="tag.path">
     <div class="tag">
-      <p class="tag__label">{{tag.title}}</p>
+      <p class="tag__label"># {{tag.title}}</p>
     </div>
   </g-link>
 </template>

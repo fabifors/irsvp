@@ -1,24 +1,24 @@
 <template>
   <g-link :to="post.node.path">
-    <article class="post-summary">
-      <header class="post-summary__header">
-        <h2 class="post-summary__header__title">{{ post.node.title }}</h2>
+    <article class="post-card">
+      <header class="post-card__header">
+        <h2 class="post-card__header__title">{{ post.node.title }}</h2>
       </header>
-      <div class="post-summary__body">
-        <p class="post-summary__body__content">{{ post.node.description }}</p>
+      <div class="post-card__body">
+        <p class="post-card__body__content">{{ post.node.description }}</p>
       </div>
-      <footer class="post-summary__footer">
-        <div class="post-summary__footer__section">
-          <p class="post-summary__footer__date">
+      <footer class="post-card__footer">
+        <div class="post-card__footer__section">
+          <p class="post-card__footer__date">
             Posted on:
             <span class="highlight">{{post.node.date}}</span>
           </p>
-          <p class="post-summary__footer__author">
+          <p class="post-card__footer__author">
             by:
             <span class="highlight">{{ post.node.author }}</span>
           </p>
         </div>
-        <ul class="post-summary__footer__tags">
+        <ul class="post-card__footer__tags" :if="post.node.tags">
           <li v-for="tag in post.node.tags" :key="tag.id">
             <tag :tag="tag"/>
           </li>
@@ -31,7 +31,7 @@
 <script>
 import Tag from "@/components/Tag.vue";
 export default {
-  name: "post-summary",
+  name: "post-card",
   props: ["post"],
   methods: {
     log(data) {
@@ -49,7 +49,7 @@ a {
   text-decoration: none;
 }
 
-.post-summary {
+.post-card {
   background: #fff;
   border-radius: 8px;
   padding: 70px;
@@ -86,13 +86,14 @@ a {
     }
 
     &__tags {
+      margin: 0;
       width: 100%;
       list-style: none;
       padding: 0;
       display: flex;
       flex-direction: row;
-      justify-content: center;
-      align-items: center;
+      justify-content: left;
+      align-items: flex-start;
 
       li {
         margin-right: 0.5rem;

@@ -1,14 +1,12 @@
 ---
-title: dude
+title: A new beginning
 author: 'Fabian'
 date: 2019-06-17
 description: 'This is a new post! Read it please...'
-tags: ['new', 'post']
+tags: ['New Beginning', 'Awesome']
 ---
 
-# new post
-
-this is a new post
+We love to create content!
 
 ### h3 test
 

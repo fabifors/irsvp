@@ -1,9 +1,9 @@
 <template>
   <Layout>
-    <h1 class="tag-title text-center space-bottom"># {{ $page.tag.title }}</h1>
+    <h1 class="tag-title"># {{ $page.tag.title }}</h1>
 
     <div class="posts">
-      <PostCard v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge.node"/>
+      <post-card v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge"/>
     </div>
   </Layout>
 </template>
@@ -21,6 +21,7 @@ query Tag ($id: String!) {
             date (format: "YYYY MM DD")
             description
             content
+            author
           }
         }
       }
@@ -30,9 +31,19 @@ query Tag ($id: String!) {
 </page-query>
 
 <script>
-export default {};
+import PostCard from "@/components/PostCard.vue";
+export default {
+  components: {
+    "post-card": PostCard
+  }
+};
 </script>
 
 <style lang="scss">
+.tag-title {
+  text-align: center;
+  margin-bottom: 70px;
+  color: #707070;
+}
 </style>
 
