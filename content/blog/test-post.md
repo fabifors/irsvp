@@ -1,0 +1,10 @@
+---
+title: Testing out blog
+date: 2019-06-18
+---
+
+# This is a test 
+Hello I am writing this to inform you that a nucelear strike will occur on the 1st of may 2020, in singapore.
+
+## Dude this is dope!
+Well all above was obviously a joke and I hope you took that well. All well and good here.
