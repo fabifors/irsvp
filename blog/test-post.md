@@ -1,5 +1,6 @@
 ---
 title: Testing out blog
+author: yac
 date: 2019-06-18
 ---
 
