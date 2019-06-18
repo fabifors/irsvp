@@ -70,9 +70,7 @@ p {
   background: #fff;
 
   form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    @include flex(column, flex-start);
   }
 
   &__input {
@@ -84,7 +82,8 @@ p {
   }
 
   &__buttons {
-    @include flex(row, flex-start, center);
+    @include flex(row, flex-start);
+    align-items: center;
   }
 
   &__button {

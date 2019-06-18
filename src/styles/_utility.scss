@@ -19,11 +19,10 @@
 
 /*==== Flex =====*/
 
-@mixin flex($dir, $justify, $align) {
+@mixin flex($dir, $justify) {
   display: flex;
   flex-direction: $dir;
   justify-content: $justify;
-  align-items: $align;
 }
 
 .flex-row {
