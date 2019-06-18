@@ -51,7 +51,7 @@ export default {
 <style lang="scss" scoped>
 .post {
   &__header {
-    padding: 3.5rem;
+    padding: $space;
     text-align: center;
     flex-direction: column;
     justify-content: flex-start;
@@ -78,7 +78,7 @@ export default {
 
   &__content {
     background: #fff;
-    padding: 3.5rem;
+    padding: $space;
   }
 }
 </style>
