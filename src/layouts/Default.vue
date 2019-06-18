@@ -29,7 +29,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  background: $main-background;
+  background: $main-bg;
 }
 
 .layout {

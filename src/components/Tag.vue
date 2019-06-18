@@ -17,13 +17,13 @@ a {
   text-decoration: none;
 }
 .tag {
-  padding: 0.5rem 0.75rem;
-  background: rgb(255, 219, 224);
-  border-radius: 5px;
+  padding: $badge-md;
+  background: $highlight-bg;
+  border-radius: $border-radius-md;
   &__label {
     padding: 0;
     margin: 0;
-    color: #707070;
+    color: $text-light;
   }
 }
 </style>

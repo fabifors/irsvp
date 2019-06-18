@@ -50,8 +50,8 @@ export default {
 .feed {
   &__title {
     text-align: center;
-    margin-bottom: 70px;
-    color: #707070;
+    margin-bottom: $space;
+    color: $text-light;
   }
 }
 </style>
