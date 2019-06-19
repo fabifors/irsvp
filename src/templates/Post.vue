@@ -10,6 +10,12 @@
             <tag :tag="tag"/>
           </li>
         </ul>
+        <g-image 
+          v-if="$page.post.image && $page.post.alt" 
+          :src="$page.post.image" 
+          :alt="$page.post.alt"
+          class="cover-image"
+        />
       </header>
       <div class="post__content" v-html="$page.post.content"/>
     </article>
@@ -28,7 +34,9 @@ query Post ($path: String!) {
       id
       title
       path
-    }
+    },
+    image,
+    alt
   }
 }
 </page-query>
@@ -58,6 +66,7 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
 
     &__title {
       font-size: 2.5em;
@@ -76,9 +85,20 @@ export default {
         }
       }
     }
+    * {
+      z-index: 99;
+    }
+    .cover-image {
+      position:absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+    }
   }
 
   &__content {
+    border-radius: $border-radius-md;
     background: #fff;
     padding: $space;
   }
