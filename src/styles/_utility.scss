@@ -17,6 +17,12 @@
   }
 }
 
+.highlight {
+  font-weight: 600;
+  text-decoration: none;
+  color: $highlight;
+}
+
 /*==== Flex =====*/
 
 @mixin flex($dir, $justify) {

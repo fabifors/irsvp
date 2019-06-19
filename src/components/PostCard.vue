@@ -102,10 +102,6 @@ a {
     }
   }
 
-  .highlight {
-    font-weight: 600;
-    text-decoration: none;
-    color: $highlight;
-  }
+  
 }
 </style>
