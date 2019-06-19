@@ -1,8 +1,30 @@
 /* Colors */
-$main-background: #f3f7f9;
+$main-bg: #f3f7f9;
+$highlight-bg: #ffdbe0;
+
+$highlight: #fc8898;
+$text-light: #706570;
+$text-light-bold: #908590;
+
+/* Border-Radius */
+$border-radius-lg: 8px;
+$border-radius-md: 5px;
 
 /* Desktop */
-$spaceing-des: 3.5rem;
+$space: 4rem;
 
 /* Mobile */
-$spaceing-mob: 1.5rem;
+$space-m: 1.5rem;
+
+/* Badge */
+$badge-sm: 0.3rem 0.5rem;
+$badge-md: 0.5rem 0.8rem;
+$badge-lg: 0.8rem 1.1rem;
+
+/* Buttons */
+$btn-sm: 0.4rem 0.5rem;
+$btn-md: 0.5rem 0.7rem;
+$btn-lg: 0.7rem 1rem;
+
+/* Input */
+$input-spaceing: 0.8rem 1rem;

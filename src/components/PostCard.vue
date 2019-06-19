@@ -9,12 +9,10 @@
       </div>
       <footer class="post-card__footer">
         <div class="post-card__footer__section">
-          <p class="post-card__footer__date">
-            Posted on:
+          <p class="post-card__footer__postdata">
+            Posted
             <span class="highlight">{{post.node.date}}</span>
-          </p>
-          <p class="post-card__footer__author">
-            by:
+            by
             <span class="highlight">{{ post.node.author }}</span>
           </p>
         </div>
@@ -51,10 +49,10 @@ a {
 
 .post-card {
   background: #fff;
-  border-radius: 8px;
-  padding: 70px;
-  margin-bottom: 70px;
-  color: #706570;
+  border-radius: $border-radius-lg;
+  padding: $space;
+  margin-bottom: $space;
+  color: $text-light;
 
   &__header {
     &__title {
@@ -74,7 +72,7 @@ a {
     align-items: center;
 
     font-size: 1em;
-    color: #909090;
+    color: $text-light-bold;
     font-weight: 500;
 
     &__section {
@@ -106,8 +104,8 @@ a {
 
   .highlight {
     font-weight: 600;
-    text-decoration: underline;
-    color: violet;
+    text-decoration: none;
+    color: $highlight;
   }
 }
 </style>
