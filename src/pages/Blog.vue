@@ -1,9 +1,14 @@
 <template>
   <Layout>
-    <div class="feed">
-      <h1 class="feed__title">Blog Feed</h1>
+    <section class="feed">
+      <header class="feed__header">
+        <h1 class="feed__header__title">Blog Feed</h1>
+        <g-link to="/blog/new-post">
+          <button class="feed__header__new-post btn">New post</button>
+        </g-link>
+      </header>
       <post-card v-for="post in $page.posts.edges" :key="post.id" :post="post"/>
-    </div>
+    </section>
   </Layout>
 </template>
 
@@ -48,10 +53,16 @@ export default {
 
 <style lang="scss" scoped>
 .feed {
-  &__title {
-    text-align: center;
-    margin-bottom: $space;
-    color: $text-light;
+  &__header {
+    display: relative;
+    &__new-post {
+      position: absolute;
+    }
+    &__title {
+      text-align: center;
+      margin-bottom: $space;
+      color: $text-light;
+    }
   }
 }
 </style>
