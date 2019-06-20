@@ -3,8 +3,8 @@
     <article class="post">
       <header class="post__header">
         <h2 class="post__header__title">{{ $page.post.title }}</h2>
-        <p class="post__header__date">Created: {{ $page.post.date }}</p>
-        <p class="post__header__author">Author: {{ $page.post.author }}</p>
+        <p class="post__header__date">Created: <span class="highlight">{{ $page.post.date }}</span></p>
+        <p class="post__header__author">Author: <span class="highlight">{{ $page.post.author }}</span></p>
         <ul class="post__header__tags">
           <li v-for="tag in $page.post.tags" :key="tag.id">
             <tag :tag="tag"/>
@@ -50,6 +50,8 @@ export default {
 
 <style lang="scss" scoped>
 .post {
+  color: $text-light;
+  margin-bottom: $space;
   &__header {
     padding: $space;
     text-align: center;
