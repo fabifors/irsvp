@@ -17,6 +17,38 @@
   }
 }
 
+.btn {
+  background: $highlight;
+  padding: $badge-lg;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: $border-radius-md;
+  font-weight: 600;
+  color: $text-dark;
+
+  transition: background 200ms;
+
+  &:hover {
+    background: lighten($highlight, 5);
+  }
+
+  &:focus {
+    outline-color: darken($highlight, 20);
+  }
+}
+
+.input {
+  font-size: 1em;
+  padding: $input-spaceing;
+  background: #fff;
+  color: $text-light;
+  border-radius: $border-radius-md;
+  border: none;
+  margin: 0.25rem 0.2rem;
+
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 /*==== Flex =====*/
 
 @mixin flex($dir, $justify) {
