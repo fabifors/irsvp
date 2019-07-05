@@ -3,7 +3,7 @@ title: A new beginning
 description: This is a test post
 date: 2019-07-02
 author: fabifors
-tags: ['test', 'markdown']
+# tags: ['test', 'markdown']
 ---
 
 # Hello World!
