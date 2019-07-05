@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="tag-title"># {{ $page.tag.title }}</h1>
+    <h1 class="tag-title">#{{ $page.tag.title }}</h1>
 
     <div class="posts">
       <post-card v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge"/>
@@ -46,4 +46,3 @@ export default {
   color: #707070;
 }
 </style>
-

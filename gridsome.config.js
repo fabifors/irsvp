@@ -32,7 +32,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'posts/**/*.md',
+        path: 'posts/*.md',
         typeName: 'Post',
         route: '/blog/:slug',
         refs: {
@@ -52,6 +52,7 @@ module.exports = {
       }
     }
   ],
+
   chainWebpack(config) {
     // Load variables for all vue-files
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
