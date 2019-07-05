@@ -27,7 +27,7 @@
         rows="30"
         v-model="blogpost.content"
       ></textarea>
-      <button class="btn" @click="createNewPost()">Create New</button>
+      <button class="btn" @click.prevent="createNewPost()">Create New</button>
     </form>
   </Layout>
 </template>
@@ -67,3 +67,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.new-post {
+  @include flex(column, flex-start);
+}
+</style>

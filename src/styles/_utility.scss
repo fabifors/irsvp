@@ -25,6 +25,7 @@
   border-radius: $border-radius-md;
   font-weight: 600;
   color: $text-dark;
+  text-decoration: none;
 
   transition: background 200ms;
 
@@ -39,12 +40,13 @@
 
 .input {
   font-size: 1em;
+  line-height: 1.4;
   padding: $input-spaceing;
   background: #fff;
   color: $text-light;
   border-radius: $border-radius-md;
   border: none;
-  margin: 0.25rem 0.2rem;
+  margin: 0.3rem 0.25rem;
 
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
