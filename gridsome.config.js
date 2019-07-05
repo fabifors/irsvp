@@ -32,7 +32,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'content/blog/*.md',
+        path: 'posts/*.md',
         typeName: 'Post',
         route: '/blog/:slug',
         refs: {
@@ -43,6 +43,12 @@ module.exports = {
             create: true
           }
         }
+      }
+    },
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/admin`
       }
     }
   ],
